@@ -133,7 +133,7 @@ def reconstruct_with_dalle(x, encoder, decoder, do_preprocess=False):
 def stack_reconstructions(input, x0, x1, x2, titles=[]):
     assert input.size == x1.size == x2.size
     w, h = input.size[0], input.size[1]
-    img = Image.new("RGB", (5 * w, h))
+    img = Image.new("RGB", (4 * w, h))
     img.paste(input, (0, 0))
     img.paste(x0, (1 * w, 0))
     img.paste(x1, (2 * w, 0))
